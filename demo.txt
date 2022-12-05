@@ -1,0 +1,2 @@
+lr: 0.1, 0.01, 0.001
+feat: "resnet", "convnext", "vgg"
