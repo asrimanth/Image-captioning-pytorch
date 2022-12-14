@@ -107,7 +107,7 @@ if __name__ == "__main__":
     dataset = FlickrDataset(root_dir+"Images/", root_dir+"captions.txt", transform_list)
     pad_index = dataset.vocabulary.str_to_idx["<PAD>"]
 
-    dataloader = DataLoader(dataset, batch_size=32, num_workers=8, shuffle=True, pin_memory=True, collate_fn=TextPadCollate(pad_index))
+    dataloader = DataLoader(dataset, batch_size=64, num_workers=8, shuffle=True, pin_memory=True, collate_fn=TextPadCollate(pad_index))
 
     for image, encoded_text in dataloader:
         print(image.shape)
